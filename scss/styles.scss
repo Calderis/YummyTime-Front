@@ -14,6 +14,9 @@ $police-a : 'Circular-Book';
 	&::selection{
 		background:none;
 	}
+	&::-webkit-scrollbar {
+		display:none;
+	}
 	button{
 		cursor:pointer;
 		outline:none;
@@ -555,10 +558,13 @@ header{
 		padding:16px 20px 0 20px;
 		.image_header{
 			width:100%;
-			height:180px;
+			height:80px;
 			background-color: $color-C;
 			overflow: hidden;
 			position: relative;
+			&.big{
+				height:280px;
+			}
 			.tag{
 				position: absolute;
 				top:10px;
@@ -572,6 +578,26 @@ header{
 				color: white;
 				opacity: 0.87;
 				padding:2px 15px;
+			}
+			.title_image{
+				bottom:0px;
+				position:absolute;
+				padding:10px;
+				width: calc( 100% - 20px );
+				background-color: rgba(40,40,40,0.6);
+				h2{
+					display: inline-block;
+					font-family: "Circular Std";
+					font-size: 32px;
+					font-weight: 500;
+					line-height: 45px;
+					color: white;
+				}
+				button{
+					display: inline-block;
+					float:right;
+					margin:8px;
+				}
 			}
 		}
 		.title_simple{
@@ -606,6 +632,38 @@ header{
 				&:hover{
 					text-decoration: underline;
 				}
+			}
+		}
+		.recipe_details{
+			padding:16px 0;
+			height:30px;
+			display: block;
+			width:100%;
+			p{
+				float:left;
+				display: inline-block;
+				opacity: 0.87;
+				padding:0 4px;
+				font-family: "Circular Std";
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 24px;
+				color: white;
+				text-transform: uppercase;
+			}
+			span.icon{
+				float:left;
+				display: inline-block;
+				opacity: 0.87;
+				height:17px;
+				width:17px;
+				margin:3px 8px 0 0;
+				background-size:contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				&.starter{background-image: url(../assets/icons/profil-white.png);}
+				&.main{background-image: url(../assets/icons/profil-white.png);}
+				&.dessert{background-image: url(../assets/icons/profil-white.png);}
 			}
 		}
 		.menu_filters{
@@ -901,6 +959,74 @@ header{
 							opacity: 0.6;
 						}
 					}
+				}
+			}
+		}
+		.recipe_steps{
+			padding-top:16px;
+			width:70%;
+			margin:auto;
+			p{
+				display: block;
+				background-color:white;
+				padding:16px 20px;
+				font-family: "Circular Std";
+				font-size: 15px;
+				font-weight: 300;
+				line-height: 25px;
+				color: rgba(0,0,0,0.87);
+			}
+		}
+		.list_recipe_ingredients{
+			ul.ingredients{
+				width: calc( 100% - 240px );
+				display: inline-block;
+				li{
+					margin-bottom:1px;
+					height:42px;
+					background-color: $color-B;
+					.ingredient_image{
+						height:42px;
+						width:60px;
+						display: inline-block;
+						background-color: $color-C;
+						float:left;
+					}
+					.ingredient_informations{
+						padding:11px 0;
+						display: inline-block;
+						.ingredient_quantity{
+							font-family: "Circular Std";
+							font-size: 15px;
+							font-weight: 500;
+							text-align: center;
+							line-height: 19px;
+							padding:0 20px;
+							color: white;
+							display: inline;
+						}
+						.ingredient_name{
+							font-family: "Circular Std";
+							font-size: 15px;
+							font-weight: 300;
+							line-height: 24px;
+							color: white;
+							opacity: 0.87;
+							display: inline;
+						}
+					}
+				}
+			}
+			.add_to_chart{
+				width:220px;
+				float:right;
+				display: inline-block;
+				height:192px;
+				background-image: url(../assets/add_cart.png);
+				transition-property: opacity;
+				transition-duration:0.3s;
+				&:hover{
+					opacity: 0.6;
 				}
 			}
 		}
