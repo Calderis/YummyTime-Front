@@ -26,6 +26,7 @@ $police-a : 'Circular-Book';
 			line-height: 18px;
 			background:none;
 			padding:5px 25px;
+			display: inline-block;
 			&.Confirm{
 				color: $color-C;
 				border: 1px solid $color-C;
@@ -69,8 +70,15 @@ $police-a : 'Circular-Book';
 					background-image:url(../assets/icons/Back-white.png);
 				}
 			}
+			&.big{
+				font-size: 15px;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
 		}
 	}
+	.fright{float:right}
+	.fleft{float:left}
 }
 
 // HEADER
@@ -545,14 +553,45 @@ header{
 
 	.section{
 		padding:16px 20px 0 20px;
+		.image_header{
+			width:100%;
+			height:180px;
+			background-color: $color-C;
+			overflow: hidden;
+		}
 		.title_simple{
-			font-family: "Circular Std";
-			font-size: 32px;
-			font-weight: 500;
-			line-height: 45px;
-			color: #FFFFFF;
 			margin-top:12px;
 			margin-bottom:20px;
+			h2{
+				display: block;
+				font-family: "Circular Std";
+				font-size: 32px;
+				font-weight: 500;
+				line-height: 45px;
+				color: #FFFFFF;
+				padding-right:20px;
+			}
+			button{
+				margin-top: 10px;
+				display: inline;
+				margin-right:16px;
+			}
+		}
+		.subtitles{
+			display: block;
+			font-family: "Circular Std";
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 18px;
+			color: white;
+			opacity: 0.87;
+			margin-bottom:24px;
+			.chief{
+				cursor:pointer;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
 		}
 		.menu_filters{
 			position: relative;
@@ -700,6 +739,140 @@ header{
 						}
 					}
 					
+				}
+			}
+		}
+		.list_recipes{
+			ul.recipes{
+				li{
+					background-color: $color-B;
+					margin-bottom: 1px;
+					height:42px;
+					.recipe_image{
+						height:42px;
+						width:60px;
+						display: inline-block;
+						float:left;
+						background-color: $color-C;
+						cursor:pointer;
+					}
+					.recipe_informations{
+						display: inline-block;
+						width: calc( 100% - 60px );
+						h3{
+							display: inline-block;
+							padding: 9px 0 9px 20px;
+							font-family: "Circular Std";
+							font-size: 15px;
+							font-weight: 300;
+							line-height: 24px;
+							color: white;
+							cursor:pointer;
+							&:hover{
+								text-decoration: underline;
+							}
+						}
+						span.recipe_type{
+							width:80px;
+							display: inline-block;
+							float:right;
+							font-family: "Circular Std";
+							font-size: 13px;
+							font-weight: 300;
+							line-height: 24px;
+							color: white;
+							opacity: 0.87;
+							padding:9px 0;
+							.icon{
+								height:15px;
+								width:15px;
+								margin:4.5px;
+								margin-right:12px;
+								display: inline-block;
+								float: left;
+								background-repeat: no-repeat;
+								background-position: center;
+								background-size: contain;
+								&.starter{
+									background-image:url(../assets/icons/Cart.png);
+								}
+								&.main{
+									background-image:url(../assets/icons/Cart.png);
+								}
+								&.dessert{
+									background-image:url(../assets/icons/Cart.png);
+								}
+							}
+						}
+						& > span.menu_item{
+							background-image:url(../assets/icons/other_otptions_2_white.png);
+						}
+						span.menu_item{
+							position: relative;
+							width:24px;
+							height:24px;
+							display: inline-block;
+							float: right;
+							margin:9px 16px;
+							
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: contain;
+							cursor:pointer;
+							opacity:0;
+							&:hover{
+								opacity: 1;
+								& > .down_menu{
+									display: block;
+								}
+							}
+							.down_menu{
+								display: none;
+								position: absolute;
+								left:-150px;
+								top:10px;
+								z-index:10;
+								width:180px;
+								background-color: $color-B;
+								box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+								ul.options{
+									padding: 4px 10px;
+									display: block;
+									li{
+										height:auto;
+										padding:2px;
+										display: block;
+										font-family: "Circular Std";
+										font-size: 11px;
+										font-weight: 300;
+										line-height: 20px;
+										color: white;
+										opacity: 0.87;
+										text-transform: uppercase;
+										border-bottom:1px solid white;
+										cursor: pointer;
+										&:hover{
+											opacity: 1;
+											&:hover > .down_menu{
+												display: block;
+												left: -170px;
+												top:30px;
+											}
+										}
+										&:last-child{
+											border:none;
+										}
+									}
+								}
+							}
+						}
+					}
+					&:hover{
+						background-color: rgba(0,0,0,0.4);
+						span.menu_item{
+							opacity: 0.6;
+						}
+					}
 				}
 			}
 		}
