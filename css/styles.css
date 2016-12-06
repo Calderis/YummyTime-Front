@@ -485,6 +485,43 @@ header {
         margin-top: 10px;
         display: inline;
         margin-right: 16px; }
+    .main_content .section .chief_header {
+      margin-bottom: 43px; }
+      .main_content .section .chief_header .chief_image {
+        height: 140px;
+        width: 140px;
+        display: inline-block;
+        background-color: #00FFCD;
+        border-radius: 140px;
+        overflow: hidden;
+        float: left; }
+      .main_content .section .chief_header .chief_informations {
+        display: inline-block;
+        padding: 20px; }
+        .main_content .section .chief_header .chief_informations .chief_title h4 {
+          opacity: 0.54;
+          font-family: "Circular Std";
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 15px;
+          color: white;
+          text-transform: uppercase; }
+        .main_content .section .chief_header .chief_informations .chief_name h1 {
+          font-family: "Circular Std";
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 45px;
+          color: white; }
+        .main_content .section .chief_header .chief_informations .chief_score {
+          padding-bottom: 16px; }
+          .main_content .section .chief_header .chief_informations .chief_score p {
+            font-family: "Circular Std";
+            font-size: 9px;
+            font-weight: 300;
+            line-height: 11px;
+            color: white;
+            opacity: 0.87;
+            text-transform: uppercase; }
     .main_content .section .subtitles {
       display: block;
       font-family: "Circular Std";
