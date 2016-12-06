@@ -35,6 +35,11 @@
         * button.style.Neutral:active {
           color: #1E1D1D;
           background-color: white; }
+      * button.style.None {
+        color: white;
+        border: none; }
+        * button.style.None:active {
+          opacity: 0.5; }
       * button.style:active {
         color: white; }
         * button.style:active span.icon.cart {
@@ -897,6 +902,62 @@ header {
         display: inline-block;
         float: right;
         margin: 16px; }
+
+.popup {
+  height: 490px;
+  width: 700px;
+  position: fixed;
+  padding: 12px;
+  left: calc( 50vw - 450px);
+  top: calc( 50vh - 245px);
+  background-color: #1E1D1D; }
+  .popup .popup_title {
+    font-family: "Circular Std";
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 16px;
+    color: white;
+    margin-bottom: 12px; }
+  .popup .popup_image {
+    height: 270px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background-color: #00FFCD; }
+    .popup .popup_image .image_title {
+      position: absolute;
+      bottom: 0;
+      padding: 10px 20px; }
+      .popup .popup_image .image_title h2 {
+        font-family: "Circular Std";
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 45px;
+        color: white; }
+      .popup .popup_image .image_title p.subtitle {
+        font-family: "Circular Std";
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: white;
+        opacity: 0.87; }
+  .popup .description {
+    font-family: "Circular Std";
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 24px;
+    color: white;
+    opacity: 0.87;
+    padding-bottom: 12px;
+    margin: 16px 0 24px 0; }
+  .popup .button_actions {
+    text-align: center; }
+    .popup .button_actions button {
+      margin: 20px auto;
+      display: block; }
 
 @font-face {
   font-family: 'Circular-Black';
