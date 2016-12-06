@@ -434,7 +434,21 @@ header {
       width: 100%;
       height: 180px;
       background-color: #00FFCD;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
+      .main_content .section .image_header .tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: black;
+        border-radius: 90px;
+        font-family: "Circular Std";
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        opacity: 0.87;
+        padding: 2px 15px; }
     .main_content .section .title_simple {
       margin-top: 12px;
       margin-bottom: 20px; }
@@ -582,6 +596,17 @@ header {
                 cursor: pointer; }
                 .main_content .section .list_cookbooks ul.cookbooks li .informations .cookbook_infos p .chief_name:hover {
                   text-decoration: underline; }
+    .main_content .section .list_recipes .day {
+      border-bottom: 1px solid #A5A5A5;
+      padding-bottom: 12px;
+      margin-bottom: 16px; }
+      .main_content .section .list_recipes .day h2 {
+        font-family: "Circular Std";
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 25px;
+        color: white;
+        padding-bottom: 16px; }
     .main_content .section .list_recipes ul.recipes li {
       background-color: #1E1D1D;
       margin-bottom: 1px;

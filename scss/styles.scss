@@ -558,6 +558,21 @@ header{
 			height:180px;
 			background-color: $color-C;
 			overflow: hidden;
+			position: relative;
+			.tag{
+				position: absolute;
+				top:10px;
+				left:10px;
+				background-color: black;
+				border-radius: 90px;
+				font-family: "Circular Std";
+				font-size: 13px;
+				font-weight: 500;
+				line-height: 20px;
+				color: white;
+				opacity: 0.87;
+				padding:2px 15px;
+			}
 		}
 		.title_simple{
 			margin-top:12px;
@@ -743,6 +758,19 @@ header{
 			}
 		}
 		.list_recipes{
+			.day{
+				border-bottom: 1px solid #A5A5A5;
+				padding-bottom:12px;
+				margin-bottom:16px;
+				h2{
+					font-family: "Circular Std";
+					font-size: 20px;
+					font-weight: 300;
+					line-height: 25px;
+					color: white;
+					padding-bottom:16px;
+				}
+			}
 			ul.recipes{
 				li{
 					background-color: $color-B;
