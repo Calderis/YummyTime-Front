@@ -691,6 +691,24 @@ header {
                 cursor: pointer; }
                 .main_content .section .list_cookbooks ul.cookbooks li .informations .cookbook_infos p .chief_name:hover {
                   text-decoration: underline; }
+    .main_content .section .annoucement {
+      margin: 14px 0 42px 0; }
+      .main_content .section .annoucement h2 {
+        font-family: "Circular Std";
+        font-size: 28px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        padding-bottom: 8px; }
+      .main_content .section .annoucement p.submessage {
+        font-family: "Circular Std";
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 18px;
+        color: white;
+        opacity: 0.87; }
     .main_content .section .list_recipes .day {
       border-bottom: 1px solid #A5A5A5;
       padding-bottom: 12px;
@@ -805,6 +823,8 @@ header {
                     top: 30px; }
                 .main_content .section .list_recipes ul.recipes li .recipe_informations span.menu_item .down_menu ul.options li:last-child {
                   border: none; }
+        .main_content .section .list_recipes ul.recipes li .recipe_informations button {
+          margin: 6px 20px; }
       .main_content .section .list_recipes ul.recipes li:hover {
         background-color: rgba(0, 0, 0, 0.4); }
         .main_content .section .list_recipes ul.recipes li:hover span.menu_item {
