@@ -1,3 +1,6 @@
+body {
+  background-color: #121212; }
+
 * {
   cursor: default; }
   *::-moz-selection {
@@ -1062,60 +1065,63 @@ header {
         opacity: 0.54; }
         .main_content .section .steps_path ul.steps li.active {
           opacity: 1; }
-    .main_content .section .list_categorie {
-      font-family: "Circular Std";
-      font-size: 13px;
-      font-weight: 100;
-      line-height: 16px;
-      color: white;
-      margin: 9px 0; }
     .main_content .section .navigations_buttons {
       margin: 24px 0; }
-    .main_content .section .input_block {
-      width: 100%;
-      background-color: white;
-      border-radius: 2px; }
-      .main_content .section .input_block input {
-        padding: 4px 10px;
-        width: calc( 90% - 20px);
-        border: none;
-        background: none;
-        font-family: "Circular Std";
-        font-size: 13px;
-        font-weight: 300;
-        line-height: 16px;
-        cursor: text;
-        outline: none;
-        display: inline-block; }
-      .main_content .section .input_block .count_limit {
-        display: inline-block;
-        background-color: #D8D8D8;
-        border-radius: 33px;
-        float: right;
-        font-family: "Circular Std";
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 16px;
-        opacity: 0.87;
-        color: white;
-        padding: 1px 8px;
-        margin: 3px 11px; }
-    .main_content .section .textarea_block {
-      background-color: white;
-      border-radius: 2px;
-      width: 100%;
-      min-height: 200px;
-      position: relative;
-      display: block; }
-      .main_content .section .textarea_block textarea {
-        display: block;
-        border: none;
-        height: 100%;
-        padding: 6px 10px;
-        outline: none;
-        width: calc( 100% - 20px);
-        min-height: 180px;
-        cursor: text; }
+
+.list_categorie {
+  font-family: "Circular Std";
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 16px;
+  color: white;
+  margin: 9px 0; }
+
+.input_block {
+  width: 100%;
+  background-color: white;
+  border-radius: 2px; }
+  .input_block input {
+    padding: 4px 10px;
+    width: calc( 90% - 20px);
+    border: none;
+    background: none;
+    font-family: "Circular Std";
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    cursor: text;
+    outline: none;
+    display: inline-block; }
+  .input_block .count_limit {
+    display: inline-block;
+    background-color: #D8D8D8;
+    border-radius: 33px;
+    float: right;
+    font-family: "Circular Std";
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    opacity: 0.87;
+    color: white;
+    padding: 1px 8px;
+    margin: 3px 11px; }
+
+.textarea_block {
+  background-color: white;
+  border-radius: 2px;
+  width: 100%;
+  min-height: 200px;
+  position: relative;
+  display: block; }
+  .textarea_block textarea {
+    display: block;
+    border: none;
+    height: 100%;
+    padding: 6px 10px;
+    outline: none;
+    width: calc( 100% - 20px);
+    min-height: 180px;
+    cursor: text; }
 
 .popup {
   height: 490px;
@@ -1172,6 +1178,33 @@ header {
     .popup .button_actions button {
       margin: 20px auto;
       display: block; }
+
+.login_page {
+  width: 420px;
+  margin: auto;
+  padding: 46px 0; }
+  .login_page .logo {
+    display: block;
+    width: 140px;
+    height: 100px;
+    background-color: #00FFCD;
+    margin: 26px auto 50px; }
+  .login_page .button_action {
+    margin: 24px auto; }
+  .login_page .aside_text {
+    float: right;
+    font-family: "Circular Std";
+    font-size: 13px;
+    font-weight: 100;
+    text-align: right;
+    line-height: 16px;
+    opacity: 0.87;
+    color: white;
+    margin-top: 6px;
+    cursor: pointer; }
+    .login_page .aside_text:hover {
+      text-decoration: underline;
+      opacity: 1; }
 
 @font-face {
   font-family: 'Circular-Black';

@@ -1,7 +1,7 @@
 // VARIABLES
 $color-A: #121212;
 $color-B: #1E1D1D;
-// $color-C: #ff3366;
+//$color-C: #ff3366;
 $color-C: #00FFCD;
 $color-D: #ED4747;
 $color-E: #282828;
@@ -11,6 +11,9 @@ $base-color: white;
 $police-a : 'Circular-Book';
 
 // GENERAL
+body{
+	background-color:$color-A;
+}
 *{
 	cursor:default;
 	&::selection{
@@ -935,15 +938,6 @@ header{
 			}
 		}
 
-		.input_block{
-			input{
-				//
-			}
-			.count_limit{
-				//
-			}
-		}
-
 		.annoucement{
 			margin:14px 0 42px 0;
 			h2{
@@ -1337,67 +1331,67 @@ header{
 				}
 			}
 		}
-		.list_categorie{
-			font-family: "Circular Std";
-			font-size: 13px;
-			font-weight: 100;
-			line-height: 16px;
-			color: $base-color;
-			margin:9px 0;
-		}
 		.navigations_buttons{
 			margin:24px 0;
 		}
-		.input_block{
-			width:100%;
-			background-color: $base-color;
-			border-radius: 2px;
-			input{
-				padding: 4px 10px;
-				width: calc( 90% - 20px );
-				border:none;
-				background: none;
-				font-family: "Circular Std";
-				font-size: 13px;
-				font-weight: 300;
-				line-height: 16px;
-				cursor:text;
-				outline:none;
-				display: inline-block;
-			}
-			.count_limit{
-				display: inline-block;
-				background-color: $color-G;
-				border-radius: 33px;
-				float:right;
-				font-family: "Circular Std";
-				font-size: 13px;
-				font-weight: 500;
-				line-height: 16px;
-				opacity: 0.87;
-				color: $base-color;
-				padding: 1px 8px;
-				margin:3px 11px;
-			}
-		}
-		.textarea_block{
-			background-color: $base-color;
-			border-radius: 2px;
-			width:100%;
-			min-height:200px;
-			position: relative;
-			display: block;
-			textarea{
-				display: block;
-				border:none;
-				height:100%;
-				padding:6px 10px;
-				outline:none;
-				width: calc( 100% - 20px );
-				min-height:180px;
-				cursor:text;
-			}
-		}
+	}
+}
+.list_categorie{
+	font-family: "Circular Std";
+	font-size: 13px;
+	font-weight: 100;
+	line-height: 16px;
+	color: $base-color;
+	margin:9px 0;
+}
+.input_block{
+	width:100%;
+	background-color: $base-color;
+	border-radius: 2px;
+	input{
+		padding: 4px 10px;
+		width: calc( 90% - 20px );
+		border:none;
+		background: none;
+		font-family: "Circular Std";
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 16px;
+		cursor:text;
+		outline:none;
+		display: inline-block;
+	}
+	.count_limit{
+		display: inline-block;
+		background-color: $color-G;
+		border-radius: 33px;
+		float:right;
+		font-family: "Circular Std";
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 16px;
+		opacity: 0.87;
+		color: $base-color;
+		padding: 1px 8px;
+		margin:3px 11px;
+	}
+}
+.textarea_block{
+	background-color: $base-color;
+	border-radius: 2px;
+	width:100%;
+	min-height:200px;
+	position: relative;
+	display: block;
+	textarea{
+		display: block;
+		border:none;
+		height:100%;
+		padding:6px 10px;
+		outline:none;
+		width: calc( 100% - 20px );
+		min-height:180px;
+		cursor:text;
 	}
 }
 
@@ -1463,6 +1457,39 @@ header{
 		button{
 			margin:20px auto;
 			display: block;
+		}
+	}
+}
+
+// LOGIN
+.login_page{
+	width:420px;
+	margin:auto;
+	padding: 46px 0;
+	.logo{
+		display: block;
+		width: 140px;
+		height: 100px;
+		background-color: $color-C;
+		margin:26px auto 50px;
+	}
+	.button_action{
+		margin: 24px auto;
+	}
+	.aside_text{
+		float:right;
+		font-family: "Circular Std";
+		font-size: 13px;
+		font-weight: 100;
+		text-align: right;
+		line-height: 16px;
+		opacity: 0.87;
+		color: white;
+		margin-top:6px;
+		cursor: pointer;
+		&:hover{
+			text-decoration: underline;
+			opacity: 1;
 		}
 	}
 }
