@@ -59,10 +59,43 @@
         font-size: 15px;
         text-transform: uppercase;
         font-weight: 500; }
+      * button.style.round {
+        height: 34px;
+        width: 34px;
+        text-align: center;
+        border-radius: 50px;
+        overflow: hidden;
+        padding: 0; }
+  * .checkbox {
+    display: inline-block;
+    margin: 4px 1px; }
+    * .checkbox [type="checkbox"], * .checkbox [type="radio"] {
+      position: absolute;
+      left: -9999px; }
+      * .checkbox [type="checkbox"] + label, * .checkbox [type="radio"] + label {
+        border: 1px solid white;
+        border-radius: 2px;
+        font-family: "Circular Std";
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        padding: 2px 8px;
+        cursor: pointer;
+        text-transform: uppercase; }
+      * .checkbox [type="checkbox"]:checked + label, * .checkbox [type="radio"]:checked + label {
+        background-color: #00FFCD;
+        border: 1px solid #00FFCD;
+        border-radius: 2px;
+        color: #121212; }
   * .fright {
     float: right; }
   * .fleft {
     float: left; }
+  * .aright {
+    text-align: right; }
+  * .aleft {
+    text-align: left; }
 
 header {
   height: 24px;
@@ -256,7 +289,7 @@ header {
       font-size: 13px;
       font-weight: 300;
       line-height: 28px;
-      color: #FFFFFF; }
+      color: white; }
 
 .main_frame .sidebar_right {
   z-index: 8;
@@ -273,7 +306,7 @@ header {
       font-size: 18px;
       font-weight: bold;
       line-height: 23px;
-      color: #FFFFFF;
+      color: white;
       border-bottom: 2px solid rgba(255, 255, 255, 0.6); }
   .main_frame .sidebar_right ul.list-chiefs {
     width: 100%;
@@ -310,7 +343,7 @@ header {
             font-size: 14px;
             font-weight: 500;
             line-height: 18px;
-            color: #FFFFFF; }
+            color: white; }
           .main_frame .sidebar_right ul.list-chiefs li.chief-stick .stick-content .stick-infos span.sub-infos {
             font-family: "Circular Std";
             font-size: 9px;
@@ -399,7 +432,7 @@ header {
         font-weight: 500;
         text-align: center;
         line-height: 20px;
-        color: #FFFFFF; }
+        color: white; }
       .main_frame .current_week ul.footer li.week_overview ul.switcher li.button {
         cursor: pointer;
         width: 11px;
@@ -417,7 +450,7 @@ header {
         font-weight: 300;
         text-align: center;
         line-height: 18px;
-        color: #FFFFFF;
+        color: white;
         cursor: pointer; }
         .main_frame .current_week ul.footer li.week_overview ul.recipe_infos li.recipe_name p {
           display: inline; }
@@ -436,10 +469,12 @@ header {
   height: calc( 100vh - 90px);
   overflow-y: auto; }
   .main_content .section {
-    padding: 16px 20px 0 20px; }
+    padding: 16px 20px 20px 20px;
+    overflow: auto;
+    zoom: 1; }
     .main_content .section .image_header {
       width: 100%;
-      height: 80px;
+      height: 180px;
       background-color: #00FFCD;
       overflow: hidden;
       position: relative; }
@@ -449,7 +484,7 @@ header {
         position: absolute;
         top: 10px;
         left: 10px;
-        background-color: black;
+        background-color: #121212;
         border-radius: 90px;
         font-family: "Circular Std";
         font-size: 13px;
@@ -484,7 +519,7 @@ header {
         font-size: 32px;
         font-weight: 500;
         line-height: 45px;
-        color: #FFFFFF;
+        color: white;
         padding-right: 20px; }
       .main_content .section .title_simple button {
         margin-top: 10px;
@@ -843,8 +878,12 @@ header {
         line-height: 25px;
         color: rgba(0, 0, 0, 0.87); }
     .main_content .section .list_recipe_ingredients ul.ingredients {
-      width: calc( 100% - 240px);
+      width: 100%;
       display: inline-block; }
+      .main_content .section .list_recipe_ingredients ul.ingredients.with_aside {
+        width: calc( 100% - 240px); }
+        .main_content .section .list_recipe_ingredients ul.ingredients.with_aside.big {
+          width: calc( 100% - 300px); }
       .main_content .section .list_recipe_ingredients ul.ingredients li {
         margin-bottom: 1px;
         height: 42px;
@@ -875,6 +914,14 @@ header {
             color: white;
             opacity: 0.87;
             display: inline; }
+        .main_content .section .list_recipe_ingredients ul.ingredients li .hidden_buttons {
+          opacity: 0;
+          float: right;
+          margin: 6px; }
+        .main_content .section .list_recipe_ingredients ul.ingredients li:hover {
+          background-color: #121212; }
+          .main_content .section .list_recipe_ingredients ul.ingredients li:hover .hidden_buttons {
+            opacity: 1; }
     .main_content .section .list_recipe_ingredients .add_to_chart {
       width: 220px;
       float: right;
@@ -885,6 +932,48 @@ header {
       transition-duration: 0.3s; }
       .main_content .section .list_recipe_ingredients .add_to_chart:hover {
         opacity: 0.6; }
+    .main_content .section .list_recipe_ingredients .aside_list {
+      width: 280px;
+      display: inline-block;
+      float: right;
+      background-color: #282828; }
+      .main_content .section .list_recipe_ingredients .aside_list .head_image {
+        width: 100%;
+        height: 110px;
+        display: block;
+        overflow: hidden;
+        background-color: #00FFCD; }
+      .main_content .section .list_recipe_ingredients .aside_list .aside_content {
+        padding: 12px 15px; }
+        .main_content .section .list_recipe_ingredients .aside_list .aside_content h4 {
+          font-family: "Circular Std";
+          font-size: 24px;
+          font-weight: 100;
+          line-height: 30px;
+          color: white;
+          margin-bottom: 3px; }
+        .main_content .section .list_recipe_ingredients .aside_list .aside_content .counter {
+          background-color: rgba(255, 255, 255, 0.4);
+          border-radius: 16px;
+          height: 34px;
+          margin: 12px 0; }
+          .main_content .section .list_recipe_ingredients .aside_list .aside_content .counter input[type="number"] {
+            border: none;
+            background: none;
+            outline: none;
+            height: 100%;
+            text-align: center;
+            font-family: "Circular Std";
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 34px;
+            color: white;
+            width: calc( 100% - 70px); }
+        .main_content .section .list_recipe_ingredients .aside_list .aside_content .button_actions {
+          text-align: center;
+          margin-top: 32px;
+          margin-bottom: 12px; }
     .main_content .section .list_chiefs ul.chiefs li {
       padding: 8px;
       height: 52px;
@@ -922,6 +1011,27 @@ header {
         display: inline-block;
         float: right;
         margin: 16px; }
+    .main_content .section .steps_path ul.steps {
+      margin-bottom: 24px; }
+      .main_content .section .steps_path ul.steps li {
+        display: inline-block;
+        font-family: "Circular Std";
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23px;
+        color: white;
+        opacity: 0.54; }
+        .main_content .section .steps_path ul.steps li.active {
+          opacity: 1; }
+    .main_content .section .list_categorie {
+      font-family: "Circular Std";
+      font-size: 13px;
+      font-weight: 100;
+      line-height: 16px;
+      color: white;
+      margin: 9px 0; }
+    .main_content .section .navigations_buttons {
+      margin: 24px 0; }
 
 .popup {
   height: 490px;

@@ -1,11 +1,13 @@
 // VARIABLES
 $color-A: #121212;
 $color-B: #1E1D1D;
+//$color-C: #ff3366;
 $color-C: #00FFCD;
 $color-D: #ED4747;
 $color-E: #282828;
 $color-F: #181818;
-$color-G: #D8D8D8;;
+$color-G: #D8D8D8;
+$base-color: white;
 $police-a : 'Circular-Book';
 
 // GENERAL
@@ -45,22 +47,22 @@ $police-a : 'Circular-Book';
 				}
 			}
 			&.Neutral{
-				color: white;
-				border: 1px solid white;
+				color: $base-color;
+				border: 1px solid $base-color;
 				&:active{
 					color : $color-B;
-					background-color: white;
+					background-color: $base-color;
 				}
 			}
 			&.None{
-				color: white;
+				color: $base-color;
 				border:none;
 				&:active{
 					opacity: 0.5;
 				}
 			}
 			&:active{
-				color:white;
+				color:$base-color;
 				span.icon{
 					&.cart{
 						background-image:url(../assets/icons/Back-2.png);
@@ -85,10 +87,48 @@ $police-a : 'Circular-Book';
 				text-transform: uppercase;
 				font-weight: 500;
 			}
+			&.round{
+				height:34px;
+				width:34px;
+				text-align: center;
+				border-radius: 50px;
+				overflow: hidden;
+				padding:0;
+			}
+		}
+	}
+	.checkbox{
+		display: inline-block;
+		margin:4px 1px;
+		[type="checkbox"], [type="radio"]{
+			position: absolute;
+			left: -9999px;
+			& + label{
+				border: 1px solid $base-color;
+				border-radius: 2px;
+				font-family: "Circular Std";
+				font-size: 13px;
+				font-weight: 500;
+				line-height: 20px;
+				color: $base-color;
+				padding:2px 8px;
+				cursor:pointer;
+				text-transform: uppercase;
+			}
+			&:checked{
+				& + label{
+					background-color: $color-C;
+					border: 1px solid $color-C;
+					border-radius: 2px;
+					color: $color-A;
+				}
+			}
 		}
 	}
 	.fright{float:right}
 	.fleft{float:left}
+	.aright{text-align:right}
+	.aleft{text-align:left}
 }
 
 // HEADER
@@ -136,7 +176,7 @@ header{
 				.search_bar{
 					display:inline-block;
 					.search_container{
-						background-color:white;
+						background-color:$base-color;
 						border-radius:4px;
 						width:220px;
 						height:18px;
@@ -180,7 +220,7 @@ header{
 				}
 				.profil_name{
 					display:inline-block;
-					color:white;
+					color:$base-color;
 					font-size:14px;
 					padding:3px;
 					opacity: 0.6;
@@ -219,10 +259,10 @@ header{
 							display: block;
 							li{
 								display: block;
-								color:white;
+								color:$base-color;
 								font-size: 14px;
 								font-family: $police-a;
-								border-bottom:1px solid white;
+								border-bottom:1px solid $base-color;
 								padding:12px 8px;
 								width:120px;
 								cursor: pointer;
@@ -264,7 +304,7 @@ header{
 				transition-duration:0.1s;
 				transition-property:opacity;
 				p{
-					color:white;
+					color:$base-color;
 					font-family: $police-a;
 					font-size:15px;
 					padding-left: 10px;
@@ -326,7 +366,7 @@ header{
 					font-size: 13px;
 					font-weight: 300;
 					line-height: 28px;
-					color: #FFFFFF;
+					color: $base-color;
 				}
 			}
 		}
@@ -348,7 +388,7 @@ header{
 				font-size: 18px;
 				font-weight: bold;
 				line-height: 23px;
-				color: #FFFFFF;
+				color: $base-color;
 				border-bottom: 2px solid rgba(255,255,255,0.6);
 			}
 		}
@@ -389,14 +429,14 @@ header{
 							font-size: 14px;
 							font-weight: 500;
 							line-height: 18px;
-							color: #FFFFFF;
+							color: $base-color;
 						}
 						span.sub-infos{
 							font-family: "Circular Std";
 							font-size: 9px;
 							font-weight: 300;
 							line-height: 11px;
-							color:white;
+							color:$base-color;
 							opacity: 0.87;
 						}
 					}
@@ -467,7 +507,7 @@ header{
 						font-size: 15px;
 						font-weight: 500;
 						line-height: 20px;
-						color: white;
+						color: $base-color;
 						cursor: pointer;
 						&:hover{
 							text-decoration: underline;
@@ -479,7 +519,7 @@ header{
 						font-size: 12px;
 						font-weight: 300;
 						line-height: 18px;
-						color: white;
+						color: $base-color;
 						opacity: 0.87;
 						cursor: pointer;
 						&:hover{
@@ -507,7 +547,7 @@ header{
 						font-weight: 500;
 						text-align: center;
 						line-height: 20px;
-						color: #FFFFFF;
+						color: $base-color;
 					}
 					li.button{
 						cursor:pointer;
@@ -532,7 +572,7 @@ header{
 						font-weight: 300;
 						text-align: center;
 						line-height: 18px;
-						color: #FFFFFF;
+						color: $base-color;
 						cursor: pointer;
 						p{
 							display: inline;
@@ -562,10 +602,12 @@ header{
 	overflow-y: auto;
 
 	.section{
-		padding:16px 20px 0 20px;
+		padding:16px 20px 20px 20px;
+		overflow: auto;
+		zoom: 1;
 		.image_header{
 			width:100%;
-			height:80px;
+			height:180px;
 			background-color: $color-C;
 			overflow: hidden;
 			position: relative;
@@ -576,13 +618,13 @@ header{
 				position: absolute;
 				top:10px;
 				left:10px;
-				background-color: black;
+				background-color: $color-A;
 				border-radius: 90px;
 				font-family: "Circular Std";
 				font-size: 13px;
 				font-weight: 500;
 				line-height: 20px;
-				color: white;
+				color: $base-color;
 				opacity: 0.87;
 				padding:2px 15px;
 			}
@@ -598,7 +640,7 @@ header{
 					font-size: 32px;
 					font-weight: 500;
 					line-height: 45px;
-					color: white;
+					color: $base-color;
 				}
 				button{
 					display: inline-block;
@@ -616,7 +658,7 @@ header{
 				font-size: 32px;
 				font-weight: 500;
 				line-height: 45px;
-				color: #FFFFFF;
+				color: $base-color;
 				padding-right:20px;
 			}
 			button{
@@ -646,7 +688,7 @@ header{
 						font-size: 12px;
 						font-weight: 300;
 						line-height: 15px;
-						color: white;
+						color: $base-color;
 						text-transform: uppercase;
 					}
 				}
@@ -656,7 +698,7 @@ header{
 						font-size: 32px;
 						font-weight: 500;
 						line-height: 45px;
-						color: white;
+						color: $base-color;
 					}
 				}
 				.chief_score{
@@ -665,7 +707,7 @@ header{
 						font-size: 9px;
 						font-weight: 300;
 						line-height: 11px;
-						color: white;
+						color: $base-color;
 						opacity: 0.87;
 						text-transform: uppercase;
 					}
@@ -679,7 +721,7 @@ header{
 			font-size: 12px;
 			font-weight: 300;
 			line-height: 18px;
-			color: white;
+			color: $base-color;
 			opacity: 0.87;
 			margin-bottom:24px;
 			.chief{
@@ -703,7 +745,7 @@ header{
 				font-size: 16px;
 				font-weight: 300;
 				line-height: 24px;
-				color: white;
+				color: $base-color;
 				text-transform: uppercase;
 			}
 			span.icon{
@@ -734,7 +776,7 @@ header{
 					font-size: 12px;
 					font-weight: 300;
 					line-height: 20px;
-					color: white;
+					color: $base-color;
 					cursor:pointer;
 					text-transform: uppercase;
 					display: inline-block;
@@ -822,7 +864,7 @@ header{
 								font-size: 15px;
 								font-weight: 500;
 								line-height: 20px;
-								color: white;
+								color: $base-color;
 								padding-bottom:5px;
 								cursor: pointer;
 								&:hover{
@@ -844,7 +886,7 @@ header{
 								font-size: 12px;
 								font-weight: 300;
 								line-height: 18px;
-								color:white;
+								color:$base-color;
 								opacity: 0.87;
 								padding-bottom:12px;
 							}
@@ -856,7 +898,7 @@ header{
 								font-size: 12px;
 								font-weight: 300;
 								line-height: 18px;
-								color: white;
+								color: $base-color;
 								.chief_name{
 									cursor:pointer;
 									&:hover{
@@ -879,7 +921,7 @@ header{
 				font-weight: 500;
 				text-align: center;
 				line-height: 40px;
-				color: white;
+				color: $base-color;
 				padding-bottom:8px;
 			}
 			p.submessage{
@@ -888,7 +930,7 @@ header{
 				font-weight: 300;
 				text-align: center;
 				line-height: 18px;
-				color: white;
+				color: $base-color;
 				opacity: 0.87;
 			}
 		}
@@ -903,7 +945,7 @@ header{
 					font-size: 20px;
 					font-weight: 300;
 					line-height: 25px;
-					color: white;
+					color: $base-color;
 					padding-bottom:16px;
 				}
 			}
@@ -930,7 +972,7 @@ header{
 							font-size: 15px;
 							font-weight: 300;
 							line-height: 24px;
-							color: white;
+							color: $base-color;
 							cursor:pointer;
 							&:hover{
 								text-decoration: underline;
@@ -944,7 +986,7 @@ header{
 							font-size: 13px;
 							font-weight: 300;
 							line-height: 24px;
-							color: white;
+							color: $base-color;
 							opacity: 0.87;
 							padding:9px 0;
 							.icon{
@@ -1010,10 +1052,10 @@ header{
 										font-size: 11px;
 										font-weight: 300;
 										line-height: 20px;
-										color: white;
+										color: $base-color;
 										opacity: 0.87;
 										text-transform: uppercase;
-										border-bottom:1px solid white;
+										border-bottom:1px solid $base-color;
 										cursor: pointer;
 										&:hover{
 											opacity: 1;
@@ -1049,7 +1091,7 @@ header{
 			margin:auto;
 			p{
 				display: block;
-				background-color:white;
+				background-color:$base-color;
 				padding:16px 20px;
 				font-family: "Circular Std";
 				font-size: 15px;
@@ -1060,8 +1102,14 @@ header{
 		}
 		.list_recipe_ingredients{
 			ul.ingredients{
-				width: calc( 100% - 240px );
+				width: 100%;
 				display: inline-block;
+				&.with_aside{
+					width: calc( 100% - 240px );
+					&.big{
+						width: calc( 100% - 300px );
+					}
+				}
 				li{
 					margin-bottom:1px;
 					height:42px;
@@ -1083,7 +1131,7 @@ header{
 							text-align: center;
 							line-height: 19px;
 							padding:0 20px;
-							color: white;
+							color: $base-color;
 							display: inline;
 						}
 						.ingredient_name{
@@ -1091,9 +1139,20 @@ header{
 							font-size: 15px;
 							font-weight: 300;
 							line-height: 24px;
-							color: white;
+							color: $base-color;
 							opacity: 0.87;
 							display: inline;
+						}
+					}
+					.hidden_buttons{
+						opacity: 0;
+						float:right;
+						margin:6px;
+					}
+					&:hover{
+						background-color: $color-A;
+						.hidden_buttons{
+							opacity: 1;
 						}
 					}
 				}
@@ -1108,6 +1167,64 @@ header{
 				transition-duration:0.3s;
 				&:hover{
 					opacity: 0.6;
+				}
+			}
+			.aside_list{
+				width:280px;
+				display: inline-block;
+				float: right;
+				background-color:$color-E;
+				.head_image{
+					width:100%;
+					height:110px;
+					display: block;
+					overflow: hidden;
+					background-color: $color-C;
+				}
+				.aside_content{
+					padding:12px 15px;
+					h4{
+						font-family: "Circular Std";
+						font-size: 24px;
+						font-weight: 100;
+						line-height: 30px;
+						color: $base-color;
+						margin-bottom:3px;
+					}
+					.counter{
+						background-color: rgba(255,255,255,0.4);
+						border-radius: 16px;
+						height:34px;
+						margin:12px 0; 
+						input[type="number"]{
+							border:none;
+							background:none;
+							outline: none;
+							height:100%;
+							text-align: center;
+							font-family: "Circular Std";
+							font-size: 28px;
+							font-weight: bold;
+							text-align: center;
+							line-height: 34px;
+							color: $base-color;
+							width: calc( 100% - 70px );
+						}
+						button{
+							//
+						}
+					}
+					.filters_buttons{
+						//
+					}
+					.button_actions{
+						text-align: center;
+						margin-top:32px;
+						margin-bottom:12px;
+						button{
+							//
+						}
+					}
 				}
 			}
 		}
@@ -1137,7 +1254,7 @@ header{
 							font-size: 20px;
 							font-weight: 100;
 							line-height: 18px;
-							color: white;
+							color: $base-color;
 							opacity: 0.87;
 							padding-bottom:7px;
 						}
@@ -1146,7 +1263,7 @@ header{
 							font-size: 12px;
 							font-weight: 100;
 							line-height: 15px;
-							color: white;
+							color: $base-color;
 							opacity: 0.87;
 						}
 					}
@@ -1157,6 +1274,34 @@ header{
 					}
 				}
 			}
+		}
+		.steps_path{
+			ul.steps{
+				margin-bottom:24px;
+				li{
+					display: inline-block;
+					font-family: "Circular Std";
+					font-size: 18px;
+					font-weight: 500;
+					line-height: 23px;
+					color: $base-color;
+					opacity: 0.54;
+					&.active{
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.list_categorie{
+			font-family: "Circular Std";
+			font-size: 13px;
+			font-weight: 100;
+			line-height: 16px;
+			color: $base-color;
+			margin:9px 0;
+		}
+		.navigations_buttons{
+			margin:24px 0;
 		}
 	}
 }
@@ -1176,7 +1321,7 @@ header{
 		font-weight: 500;
 		text-align: center;
 		line-height: 16px;
-		color: white;
+		color: $base-color;
 		margin-bottom: 12px;
 	}
 	.popup_image{
@@ -1195,14 +1340,14 @@ header{
 				font-size: 32px;
 				font-weight: 500;
 				line-height: 45px;
-				color: white;
+				color: $base-color;
 			}
 			p.subtitle{
 				font-family: "Circular Std";
 				font-size: 12px;
 				font-weight: 300;
 				line-height: 18px;
-				color: white;
+				color: $base-color;
 				opacity: 0.87;
 			}
 		}
@@ -1213,7 +1358,7 @@ header{
 		font-weight: 500;
 		text-align: center;
 		line-height: 24px;
-		color: white;
+		color: $base-color;
 		opacity: 0.87;
 		padding-bottom:12px;
 		margin:16px 0 24px 0;
