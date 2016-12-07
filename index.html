@@ -94,9 +94,9 @@
 				</div>
 				<div class="steps_path">
 					<ul class="steps">
-						<li>Step 1. Generic information</li>
+						<li class="active">Step 1. Generic information</li>
 						<li>  -  </li>
-						<li class="active">Step 2. Ingrediants</li>
+						<li>Step 2. Ingrediants</li>
 						<li>  -  </li>
 						<li>Step 3. Preperation</li>
 					</ul>
@@ -104,149 +104,51 @@
 
 				<div class="list_recipe_ingredients">
 					<div class="list_categorie">
-						<h4>Ingrediants (2)</h4>
+						<h4>Name of the recipe</h4>
 					</div>
-					<ul class="ingredients">
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Delete</button>
-							</div>
-						</li>
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Delete</button>
-							</div>
-						</li>
-					</ul>
-					<div class="navigations_buttons aright">
-						<button class="style None big">Previous</button>
-						<button class="style Confirm big">Next</button>
+					<div class="input_block">
+						<input type="text" placeholder="Something yummy ..." >
+						<span class="count_limit">25/200</span>
 					</div>
+					<br>
 					<div class="list_categorie">
-						<h4>Search for ingrediants</h4>
+						<h4>Type of the recipe</h4>
 					</div>
-					<div class="search_bar">
-						<div class="search_container">
-							<div class="search_icon"></div>
-							<input class="search_field" placeholder="Search">
+					<div class="filters_buttons">
+						<form name="filters">
+							<p class="checkbox">
+								<input name="unit" type="radio" id="Starter">
+								<label for="Starter">Starter</label>
+							</p>
+							<p class="checkbox">
+								<input name="unit" type="radio" id="Main">
+								<label for="Main">Main</label>
+							</p>
+							<p class="checkbox">
+								<input name="unit" type="radio" id="Dessert">
+								<label for="Dessert">Dessert</label>
+							</p>
+						</form>
+					</div>
+					<br>
+					<div class="aside_block fleft gright">
+						<div class="list_categorie">
+							<h4>Recipe image</h4>
+						</div>
+						<div class="bloc_image">
+							<div class="title_image center">
+								<button class="style Neutral big">Chose image</button>
+							</div>
 						</div>
 					</div>
-					<ul class="ingredients with_aside big">
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Add</button>
-							</div>
-						</li>
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Add</button>
-							</div>
-						</li>
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Add</button>
-							</div>
-						</li>
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Add</button>
-							</div>
-						</li>
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Add</button>
-							</div>
-						</li>
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Add</button>
-							</div>
-						</li>
-						<li>
-							<div class="ingredient_image"></div>
-							<div class="ingredient_informations">
-								<p class="ingredient_quantity">3 kg</p>
-								<p class="ingredient_name">Name of the ingredient</p>
-							</div>
-							<div class="hidden_buttons">
-								<button class="style Neutral">Add</button>
-							</div>
-						</li>
+					<ul class="ingredients with_aside">
+						<div class="list_categorie">
+							<h4>Description</h4>
+						</div>
+						<div class="textarea_block">
+							<textarea placeholder="Let's explain how to cook it ..."></textarea>
+						</div>
 					</ul>
-					<div class="aside_list">
-						<div class="head_image"></div>
-						<div class="aside_content">
-							<h4>Tomato</h4>
-							<div class="counter">
-								<input type="number" value="320">
-								<button class="style Confirm round fleft">-</button>
-								<button class="style Confirm round fright">+</button>
-							</div>
-							<div class="filters_buttons">
-								<form name="filters">
-									<p class="checkbox">
-										<input name="unit" type="radio" id="Gramme">
-										<label for="Gramme">Gramme</label>
-									</p>
-									<p class="checkbox">
-										<input name="unit" type="radio" id="Kilo">
-										<label for="Kilo">Kilo</label>
-									</p>
-									<p class="checkbox">
-										<input name="unit" type="radio" id="Unit">
-										<label for="Unit">Unit</label>
-									</p>
-									<p class="checkbox">
-										<input name="unit" type="radio" id="Liter">
-										<label for="Liter">Liter</label>
-									</p>
-								</form>
-							</div>
-							<div class="button_actions">
-								<button class="style Neutral big">Add</button>
-							</div>
-						</div>
-					</div>
 				</div>
 				
 

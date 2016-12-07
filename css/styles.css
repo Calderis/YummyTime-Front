@@ -18,12 +18,17 @@
       line-height: 18px;
       background: none;
       padding: 5px 25px;
-      display: inline-block; }
+      display: inline-block;
+      transition-duration: 0.1s;
+      transition-property: -webkit-transform;
+      transition-property: transform;
+      transition-property: transform, -webkit-transform; }
       * button.style.Confirm {
         color: #00FFCD;
         border: 1px solid #00FFCD; }
         * button.style.Confirm:active {
-          background-color: #00FFCD; }
+          background-color: #00FFCD;
+          color: #121212; }
       * button.style.Danger {
         color: #ED4747;
         border: 1px solid #ED4747; }
@@ -41,9 +46,16 @@
         * button.style.None:active {
           opacity: 0.5; }
       * button.style:active {
+        -webkit-transform: scale(1) !important;
+        -ms-transform: scale(1) !important;
+        transform: scale(1) !important;
         color: white; }
         * button.style:active span.icon.cart {
           background-image: url(../assets/icons/Back-2.png); }
+      * button.style:hover {
+        -webkit-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+        transform: scale(1.04); }
       * button.style span.icon {
         float: left;
         margin: 3px 10px 0 -10px;
@@ -84,18 +96,30 @@
         cursor: pointer;
         text-transform: uppercase; }
       * .checkbox [type="checkbox"]:checked + label, * .checkbox [type="radio"]:checked + label {
-        background-color: #00FFCD;
-        border: 1px solid #00FFCD;
+        background-color: white;
+        border: 1px solid white;
         border-radius: 2px;
         color: #121212; }
   * .fright {
-    float: right; }
+    float: right !important; }
   * .fleft {
-    float: left; }
+    float: left !important; }
+  * .gright {
+    margin-right: 20px !important; }
+  * .gleft {
+    margin-left: 20px !important; }
+  * .gbottom {
+    margin-bottom: 20px !important; }
+  * .gtop {
+    margin-top: 20px !important; }
   * .aright {
-    text-align: right; }
+    text-align: right !important; }
   * .aleft {
-    text-align: left; }
+    text-align: left !important; }
+  * .center {
+    text-align: center !important; }
+  * .centered {
+    margin: auto !important; }
 
 .search_container {
   background-color: white;
@@ -979,6 +1003,16 @@ header {
           text-align: center;
           margin-top: 32px;
           margin-bottom: 12px; }
+    .main_content .section .list_recipe_ingredients .aside_block .bloc_image {
+      width: 220px;
+      height: 200px;
+      display: inline-block;
+      position: relative;
+      background-color: #00FFCD; }
+      .main_content .section .list_recipe_ingredients .aside_block .bloc_image .title_image {
+        width: 100%;
+        position: absolute;
+        bottom: 10px; }
     .main_content .section .list_chiefs ul.chiefs li {
       padding: 8px;
       height: 52px;
@@ -1037,6 +1071,51 @@ header {
       margin: 9px 0; }
     .main_content .section .navigations_buttons {
       margin: 24px 0; }
+    .main_content .section .input_block {
+      width: 100%;
+      background-color: white;
+      border-radius: 2px; }
+      .main_content .section .input_block input {
+        padding: 4px 10px;
+        width: calc( 90% - 20px);
+        border: none;
+        background: none;
+        font-family: "Circular Std";
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        cursor: text;
+        outline: none;
+        display: inline-block; }
+      .main_content .section .input_block .count_limit {
+        display: inline-block;
+        background-color: #D8D8D8;
+        border-radius: 33px;
+        float: right;
+        font-family: "Circular Std";
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 16px;
+        opacity: 0.87;
+        color: white;
+        padding: 1px 8px;
+        margin: 3px 11px; }
+    .main_content .section .textarea_block {
+      background-color: white;
+      border-radius: 2px;
+      width: 100%;
+      min-height: 200px;
+      position: relative;
+      display: block; }
+      .main_content .section .textarea_block textarea {
+        display: block;
+        border: none;
+        height: 100%;
+        padding: 6px 10px;
+        outline: none;
+        width: calc( 100% - 20px);
+        min-height: 180px;
+        cursor: text; }
 
 .popup {
   height: 490px;
