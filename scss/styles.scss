@@ -131,6 +131,33 @@ $police-a : 'Circular-Book';
 	.aleft{text-align:left}
 }
 
+.search_container{
+	background-color:$base-color;
+	border-radius:4px;
+	width:220px;
+	height:18px;
+	padding:3px;
+	margin: 0 12px;
+	.search_icon{
+		display: inline-block;
+		height:14px;
+		cursor:pointer;
+		width:14px;
+		background-size:contain;
+		margin:2px;
+		float:left;
+		background-image: url(../assets/icons/search.png);
+	}
+	input.search_field{
+		background:none;
+		height:14px;
+		outline:none;
+		border:none;
+		padding:0 7px;
+		width: calc( 100% - 40px )
+	}
+}
+
 // HEADER
 header{
 	height:24px;
@@ -175,32 +202,6 @@ header{
 				}
 				.search_bar{
 					display:inline-block;
-					.search_container{
-						background-color:$base-color;
-						border-radius:4px;
-						width:220px;
-						height:18px;
-						padding:3px;
-						margin: 0 12px;
-						.search_icon{
-							display: inline-block;
-							height:14px;
-							cursor:pointer;
-							width:14px;
-							background-size:contain;
-							margin:2px;
-							float:left;
-							background-image: url(../assets/icons/search.png);
-						}
-						input.search_field{
-							background:none;
-							height:14px;
-							outline:none;
-							border:none;
-							padding:0 7px;
-							width: calc( 100% - 40px )
-						}
-					}
 				}
 			}
 			&.profil{
@@ -808,6 +809,14 @@ header{
 					padding: 20px 20px 0 20px;
 					z-index:4;
 				}
+			}
+		}
+		.search_bar{
+			.search_container{
+				margin:0 0 23px 0;
+			}
+			&.mini{
+				width:220px;
 			}
 		}
 		.list_cookbooks{

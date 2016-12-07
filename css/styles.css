@@ -97,6 +97,30 @@
   * .aleft {
     text-align: left; }
 
+.search_container {
+  background-color: white;
+  border-radius: 4px;
+  width: 220px;
+  height: 18px;
+  padding: 3px;
+  margin: 0 12px; }
+  .search_container .search_icon {
+    display: inline-block;
+    height: 14px;
+    cursor: pointer;
+    width: 14px;
+    background-size: contain;
+    margin: 2px;
+    float: left;
+    background-image: url(../assets/icons/search.png); }
+  .search_container input.search_field {
+    background: none;
+    height: 14px;
+    outline: none;
+    border: none;
+    padding: 0 7px;
+    width: calc( 100% - 40px); }
+
 header {
   height: 24px;
   width: calc( 100vw - 16px);
@@ -134,29 +158,6 @@ header {
           opacity: 1; }
     header ul li.navigation .search_bar {
       display: inline-block; }
-      header ul li.navigation .search_bar .search_container {
-        background-color: white;
-        border-radius: 4px;
-        width: 220px;
-        height: 18px;
-        padding: 3px;
-        margin: 0 12px; }
-        header ul li.navigation .search_bar .search_container .search_icon {
-          display: inline-block;
-          height: 14px;
-          cursor: pointer;
-          width: 14px;
-          background-size: contain;
-          margin: 2px;
-          float: left;
-          background-image: url(../assets/icons/search.png); }
-        header ul li.navigation .search_bar .search_container input.search_field {
-          background: none;
-          height: 14px;
-          outline: none;
-          border: none;
-          padding: 0 7px;
-          width: calc( 100% - 40px); }
     header ul li.profil {
       display: inline-block;
       height: 24px;
@@ -646,6 +647,10 @@ header {
           background-color: rgba(0, 0, 0, 0.7);
           padding: 20px 20px 0 20px;
           z-index: 4; }
+    .main_content .section .search_bar .search_container {
+      margin: 0 0 23px 0; }
+    .main_content .section .search_bar.mini {
+      width: 220px; }
     .main_content .section .list_cookbooks {
       padding-bottom: 20px; }
       .main_content .section .list_cookbooks ul.cookbooks li {
